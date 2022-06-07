@@ -1,0 +1,16 @@
+#define _CRT_SECURE_NO_WARNINGS 
+#include<stdio.h>
+#include<string.h>
+struct Book {
+	char name[20];
+	short price;
+};
+int main() {
+	struct Book b1 = { "数据结构与算法",20 };
+	struct Book*sb = &b1;//指针写法
+	b1.price = 30;//修改价格
+	strcpy(b1.name, "c语言");//strcpy修改书名字
+	printf("书名：%s\n", sb->name);
+	printf("价格：%d\n", sb->price);
+	return 0;
+}
